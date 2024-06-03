@@ -1,0 +1,70 @@
+.orange {
+  color: orange;
+}
+.profile {
+  width: 300px;
+  text-align: center;
+  padding: 1rem;
+  background-color: #ebebeb;
+  box-shadow: 7px 5px 23px -9px rgba(0, 0, 0, 0.75);
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 7px 5px 23px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 5px 23px -9px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+}
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+.avatar {
+  position: relative;
+  width: 200px;
+  margin: auto;
+}
+.new-tag {
+  background-color: yellowgreen;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 2px 6px;
+  position: absolute;
+  top: 1rem;
+  left: 70%;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 2px solid rgb(215, 127, 12);
+}
+.counter:hover {
+  background-color: rgb(246, 243, 197);
+}
+.number {
+  font-size: 7rem;
+}
+.title {
+  background-color: yellow;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+.total {
+  font-size: 2rem;
+}
+.button {
+  font-size: 2rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgba(215, 127, 12, 1) 0%,
+    rgba(253, 220, 29, 1) 100%
+  );
+}
