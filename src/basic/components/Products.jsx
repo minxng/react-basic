@@ -1,17 +1,13 @@
 import { useEffect, useState } from "react";
+import useProducts from "../../hooks/use-products";
 
 export default function Products() {
   const [checked, setChecked] = useState(false);
-  const [products, setProducts] = useState([]);
+  const [loading, error, products] = useProducts({ salesOnly: checked });
   const handleChange = () => setChecked((prev) => !prev);
-  useEffect(() => {
-    fetch(`data/${checked ? "sale_" : ""}products.json`)
-      .then((resp) => resp.json())
-      .then((data) => setProducts(data));
-    return () => {
-      console.log("clean!");
-    };
-  }, [checked]);
+
+  if (loading) return <p>loading...</p>;
+  if (error) return <p>{error}</p>;
   return (
     <>
       <input
@@ -19,7 +15,7 @@ export default function Products() {
         type="checkbox"
         value={checked}
         onChange={handleChange}
-      ></input>
+      />
       <label htmlFor="checkbox">Show only Sale</label>
       <ul>
         {products.map((product) => (
